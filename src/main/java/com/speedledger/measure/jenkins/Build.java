@@ -9,6 +9,7 @@ public class Build {
     private int number;
     private String jobName;
     private String result;
+    private String timestamp;
     private long startTime;
     private long duration;
     private Map<String, String> environment;
@@ -73,6 +74,7 @@ public class Build {
 
     public void setEnvironment(Map<String, String> environment) {
         this.environment = environment;
+        this.timestamp = environment.get("BUILD_ID");
     }
 
     public Map<Object, Object> getSystemProperties() {
